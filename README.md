@@ -27,7 +27,7 @@ Here's what you'll be doing :
 2. Next, you'll complete [Issue #1](/../../issues/9) and 'check in' to our smart contract by writing a contract of your own.
 3. After that you'll move to [Issue #2](/../../issues/8) and create a personal page and use a pull request(PR) to send it to the batch repo.
 4. From there you will start choosing other open issues to work on, either on your own or in collaboration with other batch members.
-5. The final step is a full dApp chosen and created by the batch! (We will provide ideas on projects you can take on)
+5. The final step is to develop a full dApp! Work alone or group up to create something you think will have an impact. (We will provide ideas on projects you can take on)
 
 We aim to empower you with the skills of dApp development and collaborating with developers, and we will be with you every step of the way.
 
@@ -71,7 +71,7 @@ So if you want to take your GitHub skills to the next level, start actively enga
 
 ## Project Focus
 
-The final step in the batch will be a project where you will all collaborate on a full-scale dApp!  More information on this will become available from the mentors as the batch progresses.
+The final step in the batch will be a project where you will create a full-scale dApp!  More information on this will become available from the mentors as the batch progresses.
 
 ## Useful Resources
 
