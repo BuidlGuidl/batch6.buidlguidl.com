@@ -24,6 +24,7 @@ export const Balance = ({ address, className = "", usdMode }: BalanceProps) => {
     isLoading,
   } = useWatchBalance({
     address,
+    chainId: targetNetwork.id,
   });
 
   const [displayUsdMode, setDisplayUsdMode] = useState(price > 0 ? Boolean(usdMode) : false);
