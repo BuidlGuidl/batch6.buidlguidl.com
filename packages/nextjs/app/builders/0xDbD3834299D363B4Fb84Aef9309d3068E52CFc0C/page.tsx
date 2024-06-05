@@ -1,4 +1,3 @@
-import Link from "next/link";
 import type { NextPage } from "next";
 import {
   AcademicCapIcon,
@@ -40,9 +39,9 @@ const HoangVu: NextPage = () => {
                   <AcademicCapIcon className="h-8 w-8 fill-secondary" />
                   <p>
                     Explore my projects on{" "}
-                    <Link href="https://github.com/JeFlame" passHref className="link" target="_blank">
+                    <a href="https://github.com/JeFlame" className="link" target="_blank">
                       GitHub
-                    </Link>
+                    </a>
                   </p>
                 </div>
 
@@ -50,9 +49,9 @@ const HoangVu: NextPage = () => {
                   <EnvelopeIcon className="h-8 w-8 fill-secondary" />
                   <p>
                     Contact me via this{" "}
-                    <Link href="mailto:hoangvu130301@gmail.com" passHref className="link" target="_blank">
+                    <a href="mailto:hoangvu130301@gmail.com" className="link" target="_blank">
                       email
-                    </Link>
+                    </a>
                   </p>
                 </div>
               </div>
@@ -62,14 +61,9 @@ const HoangVu: NextPage = () => {
                   <IdentificationIcon className="h-8 w-8 fill-secondary" />
                   <p>
                     View my profile on{" "}
-                    <Link
-                      href="https://www.linkedin.com/in/hoang-vu-847288202/"
-                      passHref
-                      className="link"
-                      target="_blank"
-                    >
+                    <a href="https://www.linkedin.com/in/hoang-vu-847288202/" className="link" target="_blank">
                       LinkedIn
-                    </Link>
+                    </a>
                   </p>
                 </div>
 
@@ -77,9 +71,9 @@ const HoangVu: NextPage = () => {
                   <ChatBubbleBottomCenterTextIcon className="h-8 w-8 fill-secondary" />
                   <p>
                     Follow me on{" "}
-                    <Link href="https://twitter.com/iaawyalytcl" passHref className="link" target="_blank">
+                    <a href="https://twitter.com/iaawyalytcl" className="link" target="_blank">
                       Twitter
-                    </Link>
+                    </a>
                   </p>
                 </div>
               </div>
