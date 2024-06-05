@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
+import Image from "next/image";
 
 const Page = () => {
   const [visibleLines, setVisibleLines] = useState([false, false, false]);
@@ -43,6 +44,9 @@ const Page = () => {
       <div className="container-md mx-auto text-4xl font-mono"> Hello everyone!</div>
 
       <div className="card lg:card-side bg-base-100 shadow-xl mx-auto max-w-xl my-10">
+        <figure>
+          <Image src="/emreknft.png" width={500} height={500} alt="emrek" />
+        </figure>
         <div className="card-body">
           <h2 className="card-title">My name is Emre</h2>
           <p className="font-mono">I am a second-year computer engineering student.</p>
