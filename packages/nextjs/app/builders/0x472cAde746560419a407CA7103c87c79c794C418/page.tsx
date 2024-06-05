@@ -2,7 +2,6 @@
 
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
-import Link from "next/link";
 import { Address } from "~~/components/scaffold-eth";
 
 export default function SpandanBarve() {
@@ -42,14 +41,14 @@ export default function SpandanBarve() {
           <h2 className="pt-2 font-semibold text-teal-300 text-lg">Connect : </h2>
 
           {socials.map((social, key) => (
-            <Link
+            <a
               key={key}
               href={social.link}
               target="_blank"
               className="underline hover:no-underline hover:text-cyan-300 duration-150"
             >
               {social.title}
-            </Link>
+            </a>
           ))}
         </div>
       </div>
