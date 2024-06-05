@@ -55,7 +55,7 @@ export default function SpandanBarve() {
       </div>
 
       <div className="md:w-[500px] md:h-[500px] w-[80vw] aspect-square md:rounded-full md:overflow-hidden relative">
-        <figure className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-cyan-400 to-green-500 animate-[spin_5s_linear_infinite] hidden md:static" />
+        <figure className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-cyan-400 to-green-500 animate-[spin_5s_linear_infinite] hidden md:block" />
         <Image
           src="/marsian.png"
           width={500}
