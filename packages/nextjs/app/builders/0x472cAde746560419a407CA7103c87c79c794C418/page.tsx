@@ -20,7 +20,7 @@ export default function SpandanBarve() {
   ];
 
   return (
-    <section className="flex items-center w-full p-[5vw] dark:bg-gray-950 dark:text-white bg-transparent text-black h-screen">
+    <section className="flex flex-col-reverse md:flex-row items-center w-full p-[5vw] dark:bg-gray-950 dark:text-white bg-transparent text-black md:h-screen">
       <div className="flex-1 flex flex-col relative">
         <h1 className="text-6xl font-bold">{"It's me... Marsian"}</h1>
 
@@ -54,16 +54,16 @@ export default function SpandanBarve() {
         </div>
       </div>
 
-      <div className="h-[500px] aspect-square rounded-full overflow-hidden relative">
-        <figure className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-cyan-400 to-green-500 animate-[spin_5s_linear_infinite]" />
+      <div className="md:w-[500px] md:h-[500px] w-[80vw] aspect-square md:rounded-full md:overflow-hidden relative">
+        <figure className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-cyan-400 to-green-500 animate-[spin_5s_linear_infinite] hidden md:static" />
         <Image
           src="/marsian.png"
           width={500}
           height={500}
           alt="marsian"
           className={`${
-            !mounted ? "h-[0px] w-[0px]" : "h-[500px] w-[500px]"
-          } absolute bottom-0 right-0 duration-[2500ms] left-1/2 -translate-x-1/2`}
+            !mounted ? "md:h-[0px] md:w-[0px]" : "md:h-[500px] md:w-[500px]"
+          } md:absolute bottom-0 right-0 duration-[2500ms] left-1/2 md:-translate-x-1/2`}
         />
       </div>
     </section>
