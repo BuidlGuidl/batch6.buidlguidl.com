@@ -1,6 +1,3 @@
-"use client";
-
-import Link from "next/link";
 import type { NextPage } from "next";
 import { BellIcon, BriefcaseIcon, CodeBracketIcon, FaceSmileIcon } from "@heroicons/react/24/outline";
 
@@ -36,27 +33,27 @@ const Wilman: NextPage = () => {
               <CodeBracketIcon className="h-8 w-8 fill-secondary" />
               <p>
                 Explore my projects on{" "}
-                <Link href="https://github.com/wildanvin" passHref className="link">
+                <a href="https://github.com/wildanvin" target="_blank" className="link">
                   GitHub
-                </Link>
+                </a>
               </p>
             </div>
             <div className="flex flex-col bg-base-100 px-6 py-6 text-center items-center max-w-xs rounded-3xl">
               <BriefcaseIcon className="h-8 w-8 fill-secondary" />
               <p>
                 Connect with me on{" "}
-                <Link href="https://www.linkedin.com/in/wilman-vinueza/" passHref className="link">
+                <a href="https://www.linkedin.com/in/wilman-vinueza/" target="_blank" className="link">
                   LinkedIn
-                </Link>
+                </a>
               </p>
             </div>
             <div className="flex flex-col bg-base-100 px-6 py-6 text-center items-center max-w-xs rounded-3xl">
               <BellIcon className="h-8 w-8 fill-secondary" />
               <p>
                 Follow me on{" "}
-                <Link href="https://twitter.com/wildanvin" passHref className="link">
+                <a href="https://twitter.com/wildanvin" target="_blank" className="link">
                   Twitter
-                </Link>
+                </a>
               </p>
             </div>
           </div>
