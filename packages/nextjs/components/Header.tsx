@@ -4,9 +4,11 @@ import React, { useCallback, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { zeroAddress } from "viem";
+import { useAccount } from "wagmi";
 import { Bars3Icon, BugAntIcon } from "@heroicons/react/24/outline";
 import { FaucetButton, RainbowKitCustomConnectButton } from "~~/components/scaffold-eth";
-import { useOutsideClick } from "~~/hooks/scaffold-eth";
+import { useOutsideClick, useScaffoldReadContract } from "~~/hooks/scaffold-eth";
 
 type HeaderMenuLink = {
   label: string;
@@ -63,6 +65,22 @@ export const Header = () => {
     useCallback(() => setIsDrawerOpen(false), []),
   );
 
+  const { address } = useAccount();
+
+  const { data: isInAllowList } = useScaffoldReadContract({
+    contractName: "BatchRegistry",
+    functionName: "allowList",
+    args: [address],
+  });
+
+  const { data: userContractAddress } = useScaffoldReadContract({
+    contractName: "BatchRegistry",
+    functionName: "yourContractAddress",
+    args: [address],
+  });
+
+  const isCheckedIn = userContractAddress && userContractAddress !== zeroAddress;
+
   return (
     <div className="sticky lg:static top-0 navbar bg-base-100 min-h-0 flex-shrink-0 justify-between z-20 shadow-md shadow-secondary px-0 sm:px-2">
       <div className="navbar-start w-auto lg:w-1/2">
@@ -101,7 +119,34 @@ export const Header = () => {
           <HeaderMenuLinks />
         </ul>
       </div>
+
       <div className="navbar-end flex-grow mr-4">
+        <div className="flex">
+          {address ? (
+            isInAllowList ? (
+              isCheckedIn ? (
+                <div
+                  className="tooltip tooltip-bottom mr-5"
+                  data-tip="You are in the allowlist and you have checked in"
+                >
+                  <button className="btn-active bg-transparent text-2xl">✔️</button>
+                </div>
+              ) : (
+                <div
+                  className="tooltip tooltip-bottom mr-5"
+                  data-tip="You are in the allowlist but you didn't check in"
+                >
+                  <button className="btn-active bg-transparent text-2xl">👍</button>
+                </div>
+              )
+            ) : (
+              <div className="tooltip tooltip-bottom mr-5" data-tip="You are not in the allowlist">
+                <button className="btn-active bg-transparent text-2xl">❌</button>
+              </div>
+            )
+          ) : null}
+        </div>
+
         <RainbowKitCustomConnectButton />
         <FaucetButton />
       </div>
