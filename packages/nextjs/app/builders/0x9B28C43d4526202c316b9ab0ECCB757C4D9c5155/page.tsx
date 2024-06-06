@@ -4,8 +4,9 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import me from "./me.webp";
 import "./style.css";
+import { NextPage } from "next";
 
-export default function Jriyyya() {
+const Jriyyya: NextPage = () => {
   return (
     <>
       <div className="p-4 flex h-screen bg-gradient-to-t dark:from-gray-950 dark:to-indigo-950 overflow-hidden">
@@ -61,7 +62,9 @@ export default function Jriyyya() {
       </div>
     </>
   );
-}
+};
+
+export default Jriyyya;
 
 function Star() {
   const durationStep = 4000;
