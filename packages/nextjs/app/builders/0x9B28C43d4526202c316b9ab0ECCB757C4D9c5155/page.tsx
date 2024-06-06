@@ -90,7 +90,7 @@ function Star() {
         fontSize: `${((duration - durationStep) / durationStep) * 64}px`,
       }}
     >
-      {Math.random() < 0.5 ? "+" : <>&#9733;</>}
+      &#9733;
     </figure>
   );
 }
