@@ -22,8 +22,11 @@ const Home: NextPage = () => {
           <p className="text-center text-lg">Get started by taking a look at your batch GitHub repository.</p>
           <p className="text-lg flex gap-2 justify-center">
             <span className="font-bold">Checked in builders count:</span>
-            <span className={`${!checkedInCounter.isFetched && "hidden"}`}>{Number(checkedInCounter.data)}</span>
-            <span className={`loading ${checkedInCounter.isFetched && "hidden"}`} />
+            {!checkedInCounter.isFetched ? (
+              <span className="loading" />
+            ) : (
+              <span>{checkedInCounter?.data?.toString() || 0}</span>
+            )}
           </p>
         </div>
 
