@@ -11,21 +11,9 @@ export default function Jriyyya() {
       <div className="p-4 flex h-screen bg-gradient-to-t dark:from-gray-950 dark:to-indigo-950 overflow-hidden">
         <div className="relative w-full h-full">
           <>
-            <Star />
-            <Star />
-            <Star />
-            <Star />
-            <Star />
-            <Star />
-            <Star />
-            <Star />
-            <Star />
-            <Star />
-            <Star />
-            <Star />
-            <Star />
-            <Star />
-            <Star />
+            {[...Array(15)].map((_, index) => (
+              <Star key={index} />
+            ))}
           </>
 
           <h1 className="text-[300px] absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2">JRIYYYA</h1>
