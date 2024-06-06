@@ -24,7 +24,7 @@ const Mayowa = () => {
     <section className="relative w-full">
       <div className="min-h-screen flex flex-col items-center justify-center">
         <div className="text-center">
-          <div className="text-3xl lg:text-4xl font-semibold">Hi, I&apos;m</div>
+          <div className="text-3xl lg:text-4xl font-semibold">Hi, I am</div>
           <h1 className="text-7xl lg:text-8xl font-black mb-4">Mayowa Obisesan</h1>
           <div className="text-lg lg:text-2xl my-6">
             Frontend Developer | Blockchain Developer | Open source contributor
