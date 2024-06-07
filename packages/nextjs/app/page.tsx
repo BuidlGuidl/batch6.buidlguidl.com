@@ -2,17 +2,9 @@
 
 import Link from "next/link";
 import type { NextPage } from "next";
-import { BugAntIcon, MagnifyingGlassIcon, MagnifyingGlassPlusIcon } from "@heroicons/react/24/outline";
-import { Address } from "~~/components/scaffold-eth";
-import { useScaffoldEventHistory } from "~~/hooks/scaffold-eth";
+import { BugAntIcon, MagnifyingGlassIcon } from "@heroicons/react/24/outline";
 
 const Home: NextPage = () => {
-  const { data: checkedInEvents, isLoading: isCheckedInEventsLoading } = useScaffoldEventHistory({
-    contractName: "BatchRegistry",
-    eventName: "CheckedIn",
-    fromBlock: 120936875n,
-  });
-
   return (
     <>
       <div className="flex items-center flex-col flex-grow pt-10">
@@ -26,57 +18,6 @@ const Home: NextPage = () => {
             <span className="font-bold">Checked in builders count:</span>
             <span>To Be Implemented</span>
           </p>
-        </div>
-        <div className="flex items-center flex-col flex-grow">
-          {isCheckedInEventsLoading ? (
-            <div className="flex justify-center items-center mt-10">
-              <span className="loading loading-spinner loading-lg"></span>
-            </div>
-          ) : (
-            <div className="mt-8">
-              <div className="text-center mb-4">
-                <span className="block text-2xl font-bold">Builders List</span>
-              </div>
-              <div className="overflow-x-auto shadow-lg">
-                <table className="table table-zebra w-full">
-                  <thead>
-                    <tr>
-                      <th className="bg-primary text-lg">Address </th>
-                      <th className="bg-primary text-lg">Info</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {!checkedInEvents || checkedInEvents.length === 0 ? (
-                      <tr>
-                        <td colSpan={2} className="text-center text-3xl">
-                          Loading builders...
-                        </td>
-                      </tr>
-                    ) : (
-                      checkedInEvents
-                        ?.slice()
-                        .reverse()
-                        .filter(event => event.args.first)
-                        .map((event, index) => {
-                          return (
-                            <tr key={index}>
-                              <td className="text-center">
-                                <Address size="xl" address={event.args.builder} />
-                              </td>
-                              <td>
-                                <Link href={`/builders/${event.args.builder}`} passHref className="link">
-                                  <MagnifyingGlassPlusIcon className="h-8 w-8 fill-secondary" />
-                                </Link>
-                              </td>
-                            </tr>
-                          );
-                        })
-                    )}
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          )}
         </div>
 
         <div className="flex-grow bg-base-300 w-full mt-16 px-8 py-12">
