@@ -112,8 +112,8 @@ const Mayowa = () => {
                     width={16}
                     height={16}
                   >
-                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                    <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
+                    <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g>
                     <g id="SVGRepo_iconCarrier">
                       {" "}
                       <title>linkedin</title>{" "}
@@ -132,8 +132,8 @@ const Mayowa = () => {
               >
                 <span className="flex flex-col justify-center items-center size-12">
                   <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" width={16} height={16}>
-                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                    <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
+                    <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g>
                     <g id="SVGRepo_iconCarrier">
                       {" "}
                       <path
@@ -152,8 +152,8 @@ const Mayowa = () => {
               <div className="inline-flex flex-shrink-0 justify-center items-center gap-x-2 font-medium rounded-full bg-transparent shadow-md text-gray-800 hover:bg-neutral-100/30 dark:text-neutral-200 dark:hover:bg-neutral-50/10">
                 <span className="flex flex-col justify-center items-center size-12">
                   <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" width={16} height={16}>
-                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                    <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
+                    <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g>
                     <g id="SVGRepo_iconCarrier">
                       {" "}
                       <path
