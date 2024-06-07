@@ -17,16 +17,18 @@ const Jriyyya: NextPage = () => {
             ))}
           </>
 
-          <h1 className="text-[300px] absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2">JRIYYYA</h1>
+          <h1 className="md:text-[300px] text-[140px] absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2">
+            JRIYYYA
+          </h1>
 
           <Image
             src={me}
             alt="jriyyya"
-            className="absolute -bottom-5 left-1/2 -translate-x-1/2 h-3/4 object-contain"
+            className="absolute -bottom-5 left-1/2 -translate-x-1/2 md:h-3/4 h-2/3 object-contain"
             style={{ filter: "drop-shadow(0px -1px 8px #000)" }}
           />
 
-          <div className="absolute bottom-0 left-0 p-10 w-[32vw] text-slate-400">
+          <div className="absolute md:bottom-0 md:left-0 bottom-full translate-y-full md:translate-y-0 left-1/2 -translate-x-1/2 md:translate-x-0 md:p-10 p-5 md:w-[32vw] w-[98vw] text-slate-400">
             <span className="font-bold">About Me :</span> <br />I am a software developer and have expertise in Frontend
             Development.
             <br />I have been active in the web3 community since past 2 years now. I have{" "}
