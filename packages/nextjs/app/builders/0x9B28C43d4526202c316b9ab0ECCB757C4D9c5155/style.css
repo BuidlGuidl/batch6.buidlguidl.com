@@ -1,0 +1,16 @@
+@keyframes anim--star {
+  from {
+    opacity: 0;
+    scale: 0;
+    rotate: 0deg;
+  }
+  50% {
+    opacity: 1;
+    scale: 1;
+  }
+  to {
+    opacity: 0;
+    scale: 0;
+    rotate: 560deg;
+  }
+}
