@@ -6,7 +6,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { zeroAddress } from "viem";
 import { useAccount } from "wagmi";
-import { Bars3Icon, BugAntIcon, CheckIcon, HandThumbUpIcon, XMarkIcon } from "@heroicons/react/24/outline";
+import { Bars3Icon, BugAntIcon, CheckIcon, HandThumbUpIcon, UsersIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import { FaucetButton, RainbowKitCustomConnectButton } from "~~/components/scaffold-eth";
 import { useOutsideClick, useScaffoldReadContract } from "~~/hooks/scaffold-eth";
 
@@ -20,6 +20,11 @@ export const menuLinks: HeaderMenuLink[] = [
   {
     label: "Home",
     href: "/",
+  },
+  {
+    label: "Builders",
+    href: "/builders",
+    icon: <UsersIcon className="h-4 w-4" />,
   },
   {
     label: "Debug Contracts",
