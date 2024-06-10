@@ -1,5 +1,8 @@
+//import { BellIcon, BriefcaseIcon, CodeBracketIcon } from "@heroicons/react/24/outline";
+import DynamicHeroIcon from "./DynamicHeroIcon";
 import type { NextPage } from "next";
-import { BellIcon, BriefcaseIcon, CodeBracketIcon } from "@heroicons/react/24/outline";
+
+//import DynamicHeroIcon from "./DynamicHeroIcon";
 
 const Hugo: NextPage = () => {
   return (
@@ -20,7 +23,33 @@ const Hugo: NextPage = () => {
       {/* </section> */}
 
       <div className="flex-grow w-full mt-16 px-8 py-12 bg-base-300">
-        <div className="flex justify-center items-center gap-8 flex-col sm:flex-row">
+        <nav className="flex justify-center items-center gap-8 flex-col sm:flex-row">
+          {[
+            ["Explore my projects on", "GitHub", "https://github.com/hdevelopergit", "CodeBracketIcon"],
+            [
+              "Connect with me on",
+              "Linkedin",
+              "https://www.linkedin.com/in/hugo-hernán-angarola-bb271a7a",
+              "BriefcaseIcon",
+            ],
+            ["Follow me on", "Twitter", "https://x.com/hugo33612165", "BellIcon"],
+          ].map(([text, title, url, icon]) => (
+            <div
+              key={title}
+              className="flex flex-col bg-base-100 px-6 py-6 text-center items-center max-w-xs rounded-3xl"
+            >
+              {/* <BellIcon className="h-8 w-8 fill-secondary"/> */}
+              <DynamicHeroIcon icon={icon} />
+              <p>
+                {text}{" "}
+                <a href={url} target="_blank" className="link">
+                  {title}
+                </a>
+              </p>
+            </div>
+          ))}
+        </nav>
+        {/* <div className="flex justify-center items-center gap-8 flex-col sm:flex-row">
           <div className="flex flex-col bg-base-100 px-6 py-6 text-center items-center max-w-xs rounded-3xl">
             <CodeBracketIcon className="h-8 w-8 fill-secondary" />
             <p>
@@ -48,7 +77,7 @@ const Hugo: NextPage = () => {
               </a>
             </p>
           </div>
-        </div>
+        </div> */}
       </div>
     </>
   );
