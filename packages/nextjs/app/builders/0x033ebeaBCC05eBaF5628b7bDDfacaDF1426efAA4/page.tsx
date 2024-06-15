@@ -1,12 +1,16 @@
-//import { BellIcon, BriefcaseIcon, CodeBracketIcon } from "@heroicons/react/24/outline";
-import DynamicHeroIcon from "./DynamicHeroIcon";
 import type { NextPage } from "next";
+import { BellIcon, BriefcaseIcon, CodeBracketIcon } from "@heroicons/react/24/outline";
 
-//import DynamicHeroIcon from "./DynamicHeroIcon";
+const myData = [
+  ["Explore my projects on", "GitHub", "https://github.com/hdevelopergit", CodeBracketIcon],
+  ["Connect with me on", "Linkedin", "https://www.linkedin.com/in/hugo-hernán-angarola-bb271a7a", BriefcaseIcon],
+  ["Follow me on", "Twitter", "https://x.com/hugo33612165", BellIcon],
+] as const;
 
 const Hugo: NextPage = () => {
   return (
     <>
+      {/* Introduction */}
       <div className="text-center px-5 max-w-xl mx-auto pt-10">
         <div className="px-5">
           <h1 className="text-center">
@@ -20,26 +24,15 @@ const Hugo: NextPage = () => {
           </p>
         </div>
       </div>
-      {/* </section> */}
-
+      {/* Contact */}
       <div className="flex-grow w-full mt-16 px-8 py-12 bg-base-300">
         <nav className="flex justify-center items-center gap-8 flex-col sm:flex-row">
-          {[
-            ["Explore my projects on", "GitHub", "https://github.com/hdevelopergit", "CodeBracketIcon"],
-            [
-              "Connect with me on",
-              "Linkedin",
-              "https://www.linkedin.com/in/hugo-hernán-angarola-bb271a7a",
-              "BriefcaseIcon",
-            ],
-            ["Follow me on", "Twitter", "https://x.com/hugo33612165", "BellIcon"],
-          ].map(([text, title, url, icon]) => (
+          {myData.map(([text, title, url, Icon]) => (
             <div
               key={title}
               className="flex flex-col bg-base-100 px-6 py-6 text-center items-center max-w-xs rounded-3xl"
             >
-              {/* <BellIcon className="h-8 w-8 fill-secondary"/> */}
-              <DynamicHeroIcon icon={icon} />
+              <Icon className="h-8 w-8 fill-secondary" />
               <p>
                 {text}{" "}
                 <a href={url} target="_blank" className="link">
@@ -49,35 +42,6 @@ const Hugo: NextPage = () => {
             </div>
           ))}
         </nav>
-        {/* <div className="flex justify-center items-center gap-8 flex-col sm:flex-row">
-          <div className="flex flex-col bg-base-100 px-6 py-6 text-center items-center max-w-xs rounded-3xl">
-            <CodeBracketIcon className="h-8 w-8 fill-secondary" />
-            <p>
-              Explore my projects on{" "}
-              <a href="https://github.com/hdevelopergit" target="_blank" className="link">
-                GitHub
-              </a>
-            </p>
-          </div>
-          <div className="flex flex-col bg-base-100 px-6 py-6 text-center items-center max-w-xs rounded-3xl">
-            <BriefcaseIcon className="h-8 w-8 fill-secondary" />
-            <p>
-              Connect with me on{" "}
-              <a href="https://www.linkedin.com/in/hugo-hernán-angarola-bb271a7a" target="_blank" className="link">
-                LinkedIn
-              </a>
-            </p>
-          </div>
-          <div className="flex flex-col bg-base-100 px-6 py-6 text-center items-center max-w-xs rounded-3xl">
-            <BellIcon className="h-8 w-8 fill-secondary" />
-            <p>
-              Follow me on{" "}
-              <a href="https://x.com/hugo33612165" target="_blank" className="link">
-                Twitter
-              </a>
-            </p>
-          </div>
-        </div> */}
       </div>
     </>
   );
