@@ -83,3 +83,5 @@ To help you make the most of your BuidlGuidl Batch experience, we've gathered so
 - **PR Guide**: For a detailed understanding of the pull request process, our guide is a great resource. You can find it [here](https://gist.github.com/ZakGriffith/69d1eb8baebddd7d370b87a65a7e3ec0).
 
 The Scaffold-ETH2 and PR guides are a great place to start, but you may have to mold the instructions to suit your needs!
+
+Greetings Address: 0x521365831caCE9B65F8636f598396ff95B9aEFD9
