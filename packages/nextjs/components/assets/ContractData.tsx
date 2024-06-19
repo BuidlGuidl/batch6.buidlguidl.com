@@ -29,9 +29,6 @@ export const ContractData = () => {
     onLogs: () => {
       console.log("Greeting event emitted");
     },
-    // listener: (greetingSetter, newGreeting, premium, value) => {
-    //   console.log(greetingSetter, newGreeting, premium, value);
-    // },
   });
 
   const { showAnimation } = useAnimationConfig(totalCounter);
@@ -127,11 +124,6 @@ export const ContractData = () => {
               setTransitionEnabled(!transitionEnabled);
             }}
           >
-            {/* <div
-              className={`absolute inset-0 bg-center bg-no-repeat bg-[url('/assets/switch-button-off.png')] transition-opacity ${
-                transitionEnabled ? "opacity-0" : "opacity-100"
-              }`}
-            /> */}
             {transitionEnabled ? <LucidePause /> : <LucidePlay />}
           </button>
 
