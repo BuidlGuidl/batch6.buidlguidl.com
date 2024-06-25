@@ -2139,6 +2139,7 @@ __metadata:
     eslint-config-next: ^14.0.4
     eslint-config-prettier: ^8.5.0
     eslint-plugin-prettier: ^4.2.1
+    lucide-react: ^0.396.0
     next: ^14.0.4
     next-themes: ^0.2.1
     nprogress: ^0.2.0
@@ -2148,6 +2149,7 @@ __metadata:
     react: ^18.2.0
     react-copy-to-clipboard: ^5.1.0
     react-dom: ^18.2.0
+    react-fast-marquee: ^1.6.4
     react-hot-toast: ^2.4.0
     tailwindcss: ^3.4.3
     type-fest: ^4.6.0
@@ -9815,6 +9817,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"lucide-react@npm:^0.396.0":
+  version: 0.396.0
+  resolution: "lucide-react@npm:0.396.0"
+  peerDependencies:
+    react: ^16.5.1 || ^17.0.0 || ^18.0.0
+  checksum: 41fc6f30b2f2f0b23fea400d69090b7efb7fe87964656894f3f32de41a85b8e9124e3684f6111de32c5d4f00eb5af1f1c7420f3cb0201ebd817b9ccd5af53b80
+  languageName: node
+  linkType: hard
+
 "make-dir@npm:^3.1.0":
   version: 3.1.0
   resolution: "make-dir@npm:3.1.0"
@@ -11785,6 +11796,16 @@ __metadata:
   peerDependencies:
     react: ^18.2.0
   checksum: 7d323310bea3a91be2965f9468d552f201b1c27891e45ddc2d6b8f717680c95a75ae0bc1e3f5cf41472446a2589a75aed4483aee8169287909fcd59ad149e8cc
+  languageName: node
+  linkType: hard
+
+"react-fast-marquee@npm:^1.6.4":
+  version: 1.6.4
+  resolution: "react-fast-marquee@npm:1.6.4"
+  peerDependencies:
+    react: ">= 16.8.0 || 18.0.0"
+    react-dom: ">= 16.8.0 || 18.0.0"
+  checksum: 30bb2c967b5162e7de130cccfcf51654ac1e29ecbf82116225a13958a05a79bc0ec11d72c49f172fa8c4d1f226b51cc93f9db5cb595c5a3529de8b41f60cbc2c
   languageName: node
   linkType: hard
 
