@@ -19,7 +19,7 @@ const Home: NextPage = () => {
       await writeGreetingGreetingAsync({
         functionName: "setGreeting",
         args: [newGreeting],
-        value: parseEther("0.1"),
+        value: parseEther("0.001"),
       });
     } catch (e) {
       console.error("Error setting greeting:", e);
@@ -124,7 +124,7 @@ const Home: NextPage = () => {
                   </div>
                 </div>
               </div>
-              <div className="font-medium text-md my-4">Fee: 0.01 ETH + Gas</div>
+              <div className="font-medium text-md my-4">Fee: 0.001 ETH + Gas</div>
 
               <div className="hidden md:block absolute bottom-0 start-0 translate-y-10 -translate-x-32">
                 <svg
